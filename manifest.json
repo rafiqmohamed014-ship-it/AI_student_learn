@@ -1,0 +1,14 @@
+{
+  "name": "Kalvi AI — Student Learning Platform",
+  "short_name": "Kalvi AI",
+  "description": "AI-powered learning platform with a personal tutor, study plans, quizzes and progress analytics.",
+  "start_url": "/dashboard.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080808",
+  "theme_color": "#ff7a00",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

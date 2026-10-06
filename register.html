@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Create your account — Kalvi AI</title>
+<meta name="description" content="Create a free student account and get a personal AI tutor calibrated to your course and level." />
+<meta name="theme-color" content="#080808" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/layout.css" />
+<link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/app-pages.css" />
+<script>
+  try {
+    var t = JSON.parse(localStorage.getItem('edunova.v1.profile') || '{}');
+    if (t.preferences && t.preferences.theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div class="bg-fx"><div class="bg-grid"></div></div>
+<div class="public">
+
+  <header class="pub-nav">
+    <a class="brand" href="/index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 10 10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+      <span class="brand-name">Kalvi<span>AI</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/login.html">Already have an account?</a>
+    </nav>
+  </header>
+
+  <div class="auth-wrap">
+    <aside class="auth-aside">
+      <div>
+        <span class="eyebrow">Get started free</span>
+        <h2 style="margin:14px 0 12px">Your AI tutor already knows how to teach.</h2>
+        <p class="muted" style="max-width:42ch">Tell it your course and level, and every explanation it gives you will be pitched exactly there — no jargon you have not met yet.</p>
+      </div>
+      <ul class="col gap-16">
+        <li class="row gap-12" style="align-items:flex-start"><span class="icon-box" data-ico="check"></span><div><b>Personalised by default</b><p class="small dim">Education level, course, subjects and ability feed straight into the AI.</p></div></li>
+        <li class="row gap-12" style="align-items:flex-start"><span class="icon-box" data-ico="shield"></span><div><b>Your data stays yours</b><p class="small dim">Stored in your browser, or in your own Supabase project with row-level security.</p></div></li>
+        <li class="row gap-12" style="align-items:flex-start"><span class="icon-box" data-ico="zap"></span><div><b>Works offline</b><p class="small dim">Lessons, notes, progress and the practice quiz engine need no connection at all.</p></div></li>
+      </ul>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-card wide">
+        <h1 style="font-size:1.8rem">Create your account</h1>
+        <p class="muted small" style="margin:8px 0 22px">Takes about a minute. You can change everything later.</p>
+
+        <div id="modeNotice"></div>
+
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="fullName">Full name <span class="req">*</span></label>
+            <div class="input-group">
+              <svg class="ico input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <input class="input" id="fullName" name="fullName" type="text" placeholder="Name" autocomplete="name" required />
+            </div>
+            <div class="field-error" data-for="fullName"></div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <div class="input-group">
+              <svg class="ico input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <input class="input" id="email" name="email" type="email" placeholder="you@school.edu" autocomplete="email" required />
+            </div>
+            <div class="field-error" data-for="email"></div>
+          </div>
+
+          <div class="field" id="passwordField">
+            <label for="password">Password <span class="req">*</span></label>
+            <div class="input-group">
+              <svg class="ico input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 11h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input class="input" id="password" name="password" type="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" />
+              <button class="toggle-pw" type="button" data-toggle="password" aria-label="Show password"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            </div>
+            <div class="hint" id="pwHint">Use at least 6 characters. Passwords are hashed by Supabase — never stored in plain text.</div>
+            <div class="field-error" data-for="password"></div>
+          </div>
+
+          <div class="grid g-2" style="gap:0 14px">
+            <div class="field">
+              <label for="educationLevel">Education level <span class="req">*</span></label>
+              <select class="select" id="educationLevel" name="educationLevel" required>
+                <option value="">Select…</option>
+                <option>High School</option>
+                <option>Undergraduate</option>
+                <option>Postgraduate</option>
+                <option>Diploma / Vocational</option>
+                <option>Self-taught</option>
+              </select>
+              <div class="field-error" data-for="educationLevel"></div>
+            </div>
+            <div class="field">
+              <label for="course">Course / Degree</label>
+              <input class="input" id="course" name="course" type="text" placeholder="B.Sc. Computer Science" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Preferred subjects <span class="req">*</span></label>
+            <div class="row row-wrap gap-8" id="subjectPicker" role="group" aria-label="Preferred subjects"></div>
+            <div class="hint">Pick at least one. The AI uses these to decide what to emphasise.</div>
+            <div class="field-error" data-for="subjects"></div>
+          </div>
+
+          <div class="grid g-2" style="gap:0 14px">
+            <div class="field">
+              <label for="learningLevel">Current level</label>
+              <select class="select" id="learningLevel" name="learningLevel">
+                <option value="beginner">Beginner — starting out</option>
+                <option value="intermediate" selected>Intermediate — comfortable</option>
+                <option value="advanced">Advanced — strong foundation</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="studyGoal">Study goal</label>
+              <input class="input" id="studyGoal" name="studyGoal" type="text" placeholder="Ace my finals" />
+            </div>
+          </div>
+
+          <label class="check mb-16">
+            <input type="checkbox" id="terms" name="terms" />
+            <span>I agree to the <a href="/terms.html" style="color:var(--primary-2)">Terms</a> and <a href="/privacy.html" style="color:var(--primary-2)">Privacy Policy</a>.</span>
+          </label>
+          <div class="field-error" data-for="terms" style="margin-top:-8px;margin-bottom:12px"></div>
+
+          <button class="btn btn-primary btn-block btn-lg" type="submit" id="submitBtn">Create account</button>
+          <p class="small dim center mt-16">Already registered? <a href="/login.html" style="color:var(--primary-2);font-weight:600">Log in instead</a></p>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script type="module" src="/js/pages/register.js"></script>
+</body>
+</html>

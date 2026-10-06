@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Search &middot; Kalvi AI</title>
+<meta name="description" content="Search subjects, lessons, notes and topics." />
+<meta name="theme-color" content="#080808" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/layout.css" />
+<link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/app-pages.css" />
+<script>
+  try {
+    var t = JSON.parse(localStorage.getItem('edunova.v1.profile') || '{}');
+    if (t.preferences && t.preferences.theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<noscript>
+  <div style="padding:40px;text-align:center;color:#fff;font-family:system-ui">
+    <h1>JavaScript is required</h1>
+    <p style="color:#999">Kalvi AI is an interactive app. Please enable JavaScript to continue.</p>
+  </div>
+</noscript>
+<script type="module" src="/js/pages/search.js"></script>
+</body>
+</html>

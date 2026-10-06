@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Privacy Policy — Kalvi AI</title>
+<meta name="description" content="How Kalvi AI stores, uses and protects your data." />
+<meta name="theme-color" content="#080808" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/layout.css" />
+<link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/app-pages.css" />
+</head>
+<body>
+<div class="bg-fx"><div class="bg-grid"></div></div>
+<div class="public">
+  <header class="pub-nav">
+    <a class="brand" href="/index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 10 10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+      <span class="brand-name">Kalvi<span>AI</span></span>
+    </a>
+    <nav class="nav-links"><a href="/index.html">← Home</a><a href="/terms.html">Terms</a></nav>
+  </header>
+
+  <div class="section">
+    <div class="section-inner" style="max-width:760px">
+      <span class="eyebrow">Legal</span>
+      <h1 style="margin:12px 0 8px">Privacy Policy</h1>
+      <p class="muted small mb-24">Last updated: <span id="date"></span></p>
+
+      <div class="card card-pad-lg lesson-body">
+        <h3>1. What we store</h3>
+        <p>Kalvi AI stores only what is needed to make the product work:</p>
+        <ul>
+          <li><b>Account data</b> — your name, email, education level, course, preferred subjects and study goal.</li>
+          <li><b>Learning data</b> — lesson completions, quiz answers and scores, study-session minutes, notes, flashcards, study plans and AI conversations.</li>
+          <li><b>Preferences</b> — theme, notification and AI settings.</li>
+        </ul>
+        <p><b>We never store your password.</b> In local mode no password exists at all. In Supabase mode, passwords are hashed by Supabase Auth and are never readable by this application.</p>
+
+        <h3>2. Where your data lives</h3>
+        <p>By default everything is stored locally in your own browser using <code>localStorage</code>. Nothing is uploaded anywhere. If you configure Supabase, your data is stored in your Supabase project, protected by Row Level Security policies so that a signed-in student can only ever read and write their own rows.</p>
+
+        <h3>3. What is sent to the AI provider</h3>
+        <p>When you use an AI feature (chat, quiz generation, study plan, summarize, flashcards), the relevant text is sent from <b>your server</b> (<code>/api/ai</code>) to whichever AI provider you configured. That request contains your message, your study profile (level, course, subjects) and, where relevant, the lesson or note you are working on.</p>
+        <p>Your API key is read from a server-side environment variable and is never exposed to the browser. We do not add analytics, advertising or third-party tracking scripts.</p>
+
+        <h3>4. Deleting your data</h3>
+        <p>You can erase everything at any time:</p>
+        <ul>
+          <li><b>Local mode:</b> Settings → Data → <i>Delete all local data</i>, or clear site data in your browser.</li>
+          <li><b>Supabase mode:</b> delete your auth user in the Supabase dashboard; the foreign-key cascades remove every related row.</li>
+        </ul>
+
+        <h3>5. Sharing</h3>
+        <p>We do not sell or share personal data. The only third party that receives your content is the AI provider you configured, which processes requests on its own terms.</p>
+
+        <h3>6. Children</h3>
+        <p>This is an educational tool intended for secondary school students and above. If a student is under 13, a parent or guardian should supervise its use and agree to the Terms.</p>
+
+        <h3>7. Changes</h3>
+        <p>This policy may be updated as the product evolves. The date at the top always reflects the current version.</p>
+
+        <h3>8. Contact</h3>
+        <p>Questions: <a href="mailto:hello@edunova.app" style="color:var(--primary-2)">hello@edunova.app</a></p>
+      </div>
+
+      <div class="center mt-24">
+        <a class="btn btn-primary" href="/register.html">Create your account</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.getElementById('date').textContent = new Date().toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' });
+</script>
+</body>
+</html>

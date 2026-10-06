@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Kalvi AI — Learn Smarter. With AI.</title>
+<meta name="description" content="Your personal AI-powered learning platform that helps you understand, practice and improve every day. AI tutor, smart study plans, AI quizzes and progress analytics." />
+<meta name="theme-color" content="#080808" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/assets/favicon.svg" />
+<link rel="manifest" href="/manifest.json" />
+<meta property="og:title" content="Kalvi AI — Learn Smarter. With AI." />
+<meta property="og:description" content="AI tutor, smart study plans, AI-generated quizzes and real progress analytics for students." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/layout.css" />
+<link rel="stylesheet" href="/css/components.css" />
+<link rel="stylesheet" href="/css/app-pages.css" />
+<script>
+  // prevent a light/dark flash before the modules load
+  try {
+    var t = JSON.parse(localStorage.getItem('edunova.v1.profile') || '{}');
+    var pref = t.preferences && t.preferences.theme;
+    if (pref === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  } catch (e) {}
+</script>
+</head>
+<body>
+
+<div class="bg-fx"><div class="bg-grid"></div></div>
+
+<div class="public">
+
+  <!-- ============================================================ NAV -->
+  <header class="pub-nav" id="pubNav">
+    <a class="brand" href="/index.html">
+      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 10 10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+      <span class="brand-name">Kalvi<span>AI</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#ai">AI Tutor</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="/register.html">Get started</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================== HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge anim-up"><b>NEW</b> Real AI tutor · not a fake chatbot</div>
+        <h1 class="anim-up d-1">Learn Smarter.<br /><span class="gradient-text">With AI.</span></h1>
+        <p class="lead anim-up d-2">Your personal AI-powered learning platform that helps you understand, practice and improve every day.</p>
+        <div class="hero-cta anim-up d-3">
+          <a class="btn btn-primary btn-lg" href="/register.html" id="heroStart">Start Learning <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a class="btn btn-outline btn-lg" href="/ai-tutor.html" id="heroTutor">Explore AI Tutor <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 13.9 8 19.5 10 13.9 12 12 17.5 10.1 12 4.5 10 10.1 8z"/></svg></a>
+        </div>
+        <div class="hero-proof anim-up d-4">
+          <div><div class="n" data-count="9">9</div><div class="l">Subjects built in</div></div>
+          <div><div class="n">7</div><div class="l">AI learning modes</div></div>
+          <div><div class="n" data-count="23">23</div><div class="l">Lessons included</div></div>
+          <div><div class="n">0₹</div><div class="l">Runs on your device</div></div>
+        </div>
+      </div>
+
+      <!-- CSS-only AI illustration: an orb with orbiting feature chips -->
+      <div class="orb-wrap anim-up d-3" aria-hidden="true">
+        <div class="orb">
+          <div class="orb-core">🧠</div>
+        </div>
+        <div class="orbit-chip oc-1"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 13.9 8 19.5 10 13.9 12 12 17.5 10.1 12 4.5 10 10.1 8z"/></svg> AI Tutor</div>
+        <div class="orbit-chip oc-2"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4M16 2v4M3 10h18"/><path d="M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg> Study Plans</div>
+        <div class="orbit-chip oc-3"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.5l2 2 4-4"/><path d="M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"/></svg> AI Quizzes</div>
+        <div class="orbit-chip oc-4"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 15v-3M12 15V7M17 15v-6"/></svg> Progress</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== FEATURES -->
+  <section class="section" id="features">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Everything you need</span>
+        <h2 style="margin-top:12px">A complete learning system,<br />not just a chat window</h2>
+        <p>Six tools that work together: the AI teaches you, the planner organises you, the quizzes test you, and the analytics tell you exactly what to fix next.</p>
+      </div>
+
+      <div class="grid g-3">
+        <article class="feature">
+          <div class="icon-box icon-box-lg">🧑‍🏫</div>
+          <h3>AI Personal Tutor</h3>
+          <p>A real language model that knows your course, your subjects and your level. Ask anything, follow up, and get answers calibrated to how you learn best — not a script of canned replies.</p>
+        </article>
+        <article class="feature">
+          <div class="icon-box icon-box-lg">🗓️</div>
+          <h3>Smart Study Plans</h3>
+          <p>Tell it your exam date, available hours and weak subjects. Get a day-by-day, time-boxed plan that starts with what you are worst at. Regenerate any time.</p>
+        </article>
+        <article class="feature">
+          <div class="icon-box icon-box-lg">📝</div>
+          <h3>AI Generated Quizzes</h3>
+          <p>Choose subject, topic, difficulty and count. The AI writes real questions with plausible distractors, then explains every answer so a wrong guess still teaches you something.</p>
+        </article>
+        <article class="feature">
+          <div class="icon-box icon-box-lg">📈</div>
+          <h3>Progress Tracking</h3>
+          <p>Streaks, study time, weekly charts, subject-wise completion and quiz trends. Every number is computed from what you actually did — nothing is decorative.</p>
+        </article>
+        <article class="feature">
+          <div class="icon-box icon-box-lg">🎯</div>
+          <h3>Personalized Recommendations</h3>
+          <p>The app analyses your quiz mistakes and lesson completion, then names your strongest subject, the exact topics to revise, and the single next lesson to open.</p>
+        </article>
+        <article class="feature">
+          <div class="icon-box icon-box-lg">🗂️</div>
+          <h3>Notes &amp; Resources</h3>
+          <p>Write notes, organise them by subject, then hit <b>Summarize with AI</b> or <b>Generate Flashcards</b> to turn them into revision material automatically.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= HOW IT WORKS -->
+  <section class="section" id="how" style="padding-top:0">
+    <div class="section-inner">
+      <div class="split" style="align-items:center;gap:34px">
+        <div>
+          <span class="eyebrow">How it works</span>
+          <h2 style="margin:12px 0 14px">Three steps, then you're studying</h2>
+          <p class="muted" style="margin-bottom:22px">No credit card, no install, no complicated setup. Create an account, pick your subjects, and the AI adapts to you from the very first question.</p>
+          <div class="col gap-16">
+            <div class="row gap-12" style="align-items:flex-start">
+              <div class="lesson-num" style="background:var(--grad-primary);color:#140c02">1</div>
+              <div><h4>Create your profile</h4><p class="small muted">Education level, course, subjects and current ability. This is what makes the AI explain things at the right level.</p></div>
+            </div>
+            <div class="row gap-12" style="align-items:flex-start">
+              <div class="lesson-num" style="background:var(--grad-primary);color:#140c02">2</div>
+              <div><h4>Ask, practise, revise</h4><p class="small muted">Chat with the tutor, generate a quiz for any topic, or turn a messy note into flashcards in one click.</p></div>
+            </div>
+            <div class="row gap-12" style="align-items:flex-start">
+              <div class="lesson-num" style="background:var(--grad-primary);color:#140c02">3</div>
+              <div><h4>Watch the gap close</h4><p class="small muted">Progress analytics show exactly which topics keep costing you marks, and what to study next.</p></div>
+            </div>
+          </div>
+          <a class="btn btn-primary mt-24" href="/register.html">Create your free account</a>
+        </div>
+
+        <div class="card card-pad-lg" style="background:var(--surface);position:relative;overflow:hidden">
+          <div class="card-head">
+            <div class="row gap-10">
+              <div class="ai-face live" style="width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--grad-primary);color:#140c02"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 13.9 8 19.5 10 13.9 12 12 17.5 10.1 12 4.5 10 10.1 8z"/></svg></div>
+              <div><div class="strong small">Kalvi AI Tutor</div><div class="tiny dim">Online · knows your course</div></div>
+            </div>
+            <span class="badge badge-green">Live</span>
+          </div>
+          <div class="col gap-12">
+            <div class="msg msg-user">
+              <div class="msg-body"><div class="bubble">Explain recursion in simple words.</div></div>
+            </div>
+            <div class="msg msg-ai">
+              <div class="msg-body">
+                <div class="bubble">
+                  <p><strong>Recursion</strong> is a function that solves a problem by calling itself on a smaller version of the same problem.</p>
+                  <p>Think of unpacking nested boxes: you open the outer box, find another box inside, and open that one too — until you find the toy (your <em>base case</em>).</p>
+                  <p>Two rules make it work: a <strong>base case</strong> that stops the loop, and a recursive call that moves strictly closer to it.</p>
+                </div>
+              </div>
+            </div>
+            <div class="row gap-8" style="flex-wrap:wrap">
+              <span class="mode active">🎓 Explain Simpler</span>
+              <span class="mode">💡 Give Examples</span>
+              <span class="mode">🧠 Test My Knowledge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ AI MODES -->
+  <section class="section" id="ai" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">AI modes</span>
+        <h2 style="margin-top:12px">One tutor, seven ways to use it</h2>
+        <p>Switch modes and the AI changes how it responds — using the conversation so far as context, not starting from scratch.</p>
+      </div>
+      <div class="grid g-auto-sm">
+        <div class="card card-hover"><div class="card-title">🎓 Explain</div><p class="card-sub">Plain-English definition → real-world analogy → mechanics → worked example.</p></div>
+        <div class="card card-hover"><div class="card-title">📝 Summarize</div><p class="card-sub">Compresses a long answer or a pasted note into a tight revision outline.</p></div>
+        <div class="card card-hover"><div class="card-title">❓ Quiz Me</div><p class="card-sub">Asks one focused question at a time, then explains why the right answer is right.</p></div>
+        <div class="card card-hover"><div class="card-title">💡 Give Examples</div><p class="card-sub">Three worked examples of increasing difficulty, plus a practice problem for you.</p></div>
+        <div class="card card-hover"><div class="card-title">🔄 Explain Simpler</div><p class="card-sub">Re-explains its own previous answer in half the words and no jargon.</p></div>
+        <div class="card card-hover"><div class="card-title">📚 Create Notes</div><p class="card-sub">Produces exam-ready notes: key points, definitions, formulae, common traps.</p></div>
+        <div class="card card-hover"><div class="card-title">🧠 Test My Knowledge</div><p class="card-sub">Adaptive questioning that raises or lowers difficulty based on how you answer.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================== SUBJECTS -->
+  <section class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">Curriculum</span>
+        <h2 style="margin-top:12px">Nine subjects, fully written lessons</h2>
+        <p>Every lesson includes explanations, key points, code examples, practice questions and an "Ask AI about this lesson" button.</p>
+      </div>
+      <div class="grid g-auto-sm" id="subjectGrid"></div>
+      <div class="center mt-24">
+        <a class="btn btn-outline" href="/subjects.html">Browse all subjects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================= FAQ -->
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top:12px">Honest answers</h2>
+      </div>
+      <div class="grid g-2" style="max-width:900px;margin:0 auto">
+        <details class="card card-hover"><summary style="cursor:pointer;font-weight:700">Is the AI a real model?</summary><p class="card-sub mt-8">Yes. It calls a real language model through a small server that you run. If no API key is configured the app tells you so plainly instead of faking replies.</p></details>
+        <details class="card card-hover"><summary style="cursor:pointer;font-weight:700">Where is my data stored?</summary><p class="card-sub mt-8">Locally in your browser by default. Add Supabase and it moves to a real database with Row Level Security, so only you can read your rows.</p></details>
+        <details class="card card-hover"><summary style="cursor:pointer;font-weight:700">Do I need to pay?</summary><p class="card-sub mt-8">No paid service is required. The app, the lessons and the offline quiz engine are free. An AI API key is optional — you can use any provider, including a free tier or a local model.</p></details>
+        <details class="card card-hover"><summary style="cursor:pointer;font-weight:700">Will it write my essay for me?</summary><p class="card-sub mt-8">It is tuned to teach rather than hand over finished work. If you ask for an assignment, it explains the concept and gives you something to adapt instead.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================== CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="section-inner">
+      <div class="cta-band">
+        <h2>Ready to actually learn something?</h2>
+        <p class="muted" style="max-width:44ch;margin:14px auto 24px">Create your profile and the AI tutor starts adapting to your course, your subjects and your level from the first question.</p>
+        <div class="row gap-12" style="justify-content:center;flex-wrap:wrap">
+          <a class="btn btn-primary btn-lg" href="/register.html">Start Learning</a>
+          <a class="btn btn-ghost btn-lg" href="/login.html">I already have an account</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ FOOTER -->
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div>
+        <a class="brand" href="/index.html">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 10 10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span>
+          <span class="brand-name">Kalvi<span>AI</span></span>
+        </a>
+        <p class="small dim mt-16" style="max-width:34ch">An AI-powered learning platform built for students who want to understand, not just memorise.</p>
+      </div>
+      <div>
+        <h5>About</h5>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="/login.html">Sign in</a>
+      </div>
+      <div>
+        <h5>Features</h5>
+        <a href="/ai-tutor.html">AI Tutor</a>
+        <a href="/study-plan.html">Study Plans</a>
+        <a href="/quiz.html">Quizzes</a>
+        <a href="/progress.html">Progress</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <a href="mailto:hello@edunova.app">hello@edunova.app</a>
+        <a href="/settings.html">Support</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">Source code</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Kalvi AI. Built for students.</span>
+      <span class="row gap-6">Runs entirely on your own machine.</span>
+    </div>
+  </footer>
+</div>
+
+<script type="module" src="/js/pages/landing.js"></script>
+</body>
+</html>
